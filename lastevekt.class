@@ -1,0 +1,75 @@
+/**
+ * Lastevekt simulerer en liten maskin
+ * som skriver ut en lapp
+ * når ønsket vekt av masse er lastet på bilen
+ * @Tørres Båshus
+ * @ 2022.1
+ */
+public class Lastevekt
+{
+    // Vekt på ønsket vekt
+    private int vekt;
+    // Vekt av masse lastet på lastebil
+    private int lastevekt;
+    // Samlet vekt av lastevekten på bilen
+    private int total;
+
+    /**
+     * Konstruktør for maskinen som gir klarsignal når ønsket masse er lastet på bilen
+     */
+    public Lastebil(int masse)
+    {
+        vekt = masse;
+        lastevkt = 0;
+        total = 0;
+    }
+
+    /**
+     * Returnerer verdi av ønsket vekt av samlet masse på lastet på bilen
+     */
+    public int getVekt()
+    {
+        return vekt;
+    }
+
+    /**
+     * returnere samlet vekt av masse lastet på bilen
+     */
+    public int getLastevekt()
+    {
+        return lastevekt;
+    }
+
+    /**
+     * Tar imot vekten som er lastet på bilen
+     */
+    public void insertMasse(int mengde)
+    {
+        lastevekt = lastevekt + mengde;
+    }
+
+    /**
+     * Skriv ut en bekreftelse når ønsket masse er lastet på bilen
+     * Om ikke ønsker mengde er nådd, skriv ut hvor mye i kg som mangler for
+     * å nå ønsket lastevekt
+     */
+    public void printLapp()
+    [
+        if(lastevekt >= vekt) {
+            // Bekreftelseslapp
+            System.out.println("########")
+            System.out.println("# klar #")
+            System.out.println("########")
+
+            // Oppdatere total med vekt
+            total = total + vekt;
+            // Redusere lastevekt med vekt
+            lastevekt = lastevekt - vekt;
+        }
+        else {
+            System.out.println("Mer masse må lastes: " + 
+                                (vekt - lastvekt) + " kg")
+        }
+    ]
+
+}
